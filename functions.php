@@ -84,3 +84,9 @@ function ttext_customize ($wp_customize) {
 return $wp_customize;
 
 }
+
+function wrap_letters ($letters, $str, $subst) {
+   $re = "/([" . $letters . "])(?!(?:[^<>]*)?>)/u";
+   $result = preg_replace($re, $subst, $str);
+   return $result;
+}

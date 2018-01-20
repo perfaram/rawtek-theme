@@ -125,7 +125,7 @@ a.button {
 .menu-footer-container {
 	border-top: 1px solid #ccc;
 	padding-top: 8px;
-
+}
 /* = forms ----------------------- */
 
 form {
@@ -189,4 +189,29 @@ body {
     padding: 2em 0;
 }
 }
+
+/* - customizations ----------- */
+
+.you-spin-me-round {/*like a record*/
+	transition: 1.2s;
+	-webkit-transition: 1.2s;
+	-moz-transition: 1.2s;
+	-ms-transition: 1.2s;
+	-o-transition: 1.2s;
+	display: inline-block;
+	margin-right: auto;
+	margin-left: auto;
 }
+
+.you-spin-me-round:hover {
+	transition: 1s;
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	-webkit-transform: rotate(1turn);
+	-moz-transform: rotate(1turn);
+	-o-transform: rotate(1turn);
+	-ms-transform: rotate(1turn);
+	transform: rotate(1turn);
+} 

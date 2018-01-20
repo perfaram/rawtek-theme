@@ -21,7 +21,7 @@
 	<header id="top" class="clearfix">
 	<?php if ( !(is_single() || is_page()) ) { ?>
 	  <h1>
-	    <?php bloginfo('name'); ?>
+	    <?php echo wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>") ?>
 	  </h1>
   <?php } ?>
 	</header>
