@@ -23,5 +23,6 @@
 	  <h1 class="site-title">
 	    <?php echo (wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>")) . " "; bloginfo('description'); ?>
 	  </h1>
-  <?php } ?>
+    <?php } ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</header>
