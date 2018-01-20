@@ -21,8 +21,9 @@ body {
 	font-size:16px;
 	line-height:1.6em;
 	max-width:46em;
-        padding: 2em 2em;
-        margin: 0 auto;
+    padding: 2em 2.5em;
+    margin: 2em auto;
+	box-shadow: 0 0 40px rgba(0, 0, 0, .15);
 }
 header, article, footer {
 	max-width: 600px;
@@ -33,7 +34,7 @@ header, article, footer {
 .single article {
 }
 h1 {
-	font-size: 1.65em;
+	font-size: 1.5em;
 }
 h2 {
 	font-size: 1.2em;
@@ -80,10 +81,10 @@ img {
 	max-width: 100%;
 }
 blockquote {
-	margin: 0 0 23px -23px;
-	padding-left: 23px;
+	margin: 0 0 0px -2.5em;
+	padding-left: 2.2em;
 	color: #990000;
-	border-left: 2px solid #990000;
+	border-left: 4px solid #990000;
 }
 article blockquote p {
 	padding-bottom: 0;
@@ -185,9 +186,16 @@ input[type="submit"], button {
 /* = media queries ----------------------- */
 
 @media screen and (max-width: 800px) {
-body {
-    padding: 2em 0;
-}
+	body {
+		padding: 2em 2em;
+	    margin: 0 auto;
+	}
+	blockquote {
+		margin: 0 0 0px -2em;
+		padding-left: 1.7em;
+		color: #990000;
+		border-left: 4px solid #990000;
+	}
 }
 
 /* - customizations ----------- */
