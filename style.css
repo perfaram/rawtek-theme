@@ -215,3 +215,7 @@ body {
 	-ms-transform: rotate(1turn);
 	transform: rotate(1turn);
 } 
+
+.site-title {
+	text-transform: lowercase;
+}

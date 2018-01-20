@@ -20,7 +20,7 @@
 	<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 	<header id="top" class="clearfix">
 	<?php if ( !(is_single() || is_page()) ) { ?>
-	  <h1>
+	  <h1 class="site-title">
 	    <?php echo wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>") ?>
 	  </h1>
   <?php } ?>
