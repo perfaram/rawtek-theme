@@ -21,8 +21,11 @@
 	<header id="top" class="clearfix">
 	<?php if ( !(is_single() || is_page()) ) { ?>
 	  <h1 class="site-title">
-	    <?php echo (wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>")) . " "; bloginfo('description'); ?>
+	    <?php 
+			$formatted_title = (wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>")); 
+			$tagline = get_bloginfo('description');
+			echo "<span class='avoidwrap'>" . $formatted_title . " </span><span class='avoidwrap'>" . $tagline . "</span>" ?>
 	  </h1>
-    <?php } ?>
-	<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+  <?php } ?>
+		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</header>

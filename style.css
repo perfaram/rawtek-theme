@@ -33,7 +33,7 @@ header, article, footer {
 .single article {
 }
 h1 {
-	font-size: 1.5em;
+	font-size: 1.65em;
 }
 h2 {
 	font-size: 1.2em;
@@ -219,3 +219,5 @@ body {
 .site-title {
 	text-transform: lowercase;
 }
+
+span.avoidwrap { display:inline-block; }
