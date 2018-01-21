@@ -10,13 +10,12 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0 );
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0 );
 remove_action('wp_head', 'wp_generator');
 remove_action('wp_head','jetpack_og_tags');
+
 if ( ! isset( $content_width ) ) $content_width = 600;
 
 
 add_theme_support('automatic-feed-links');
 add_filter('show_admin_bar', '__return_false');
-
-
 
 
 function theme_styles() {
@@ -87,6 +86,12 @@ return $wp_customize;
 
 function wrap_letters ($letters, $str, $subst) {
    $re = "/([" . $letters . "])(?!(?:[^<>]*)?>)/u";
+   $result = preg_replace($re, $subst, $str);
+   return $result;
+}
+
+function wrap_word ($word, $str, $subst) {
+   $re = "/((?i)saumon(?-i))(?!(?:[^<>]*)?>)/u";
    $result = preg_replace($re, $subst, $str);
    return $result;
 }

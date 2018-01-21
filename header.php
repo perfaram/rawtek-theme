@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>
-	  <?php if (is_home () ) { bloginfo('name'); echo ' | '; bloginfo('description'); } elseif ( is_category() ) { single_cat_title();  } elseif (is_single() ) { single_post_title(); } elseif (is_page() ) { single_post_title(); } else { wp_title('',true); } ?>
+	  <?php if (is_home () ) { echo strtolower(get_bloginfo('name'));  echo ' | '; bloginfo('description'); } elseif ( is_category() ) { single_cat_title();  } elseif (is_single() ) { single_post_title(); } elseif (is_page() ) { single_post_title(); } else { wp_title('',true); } ?>
 	</title>
 	<link href="<?php echo get_bloginfo( 'template_directory' );?>/style.css" rel="stylesheet">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo_rss('name'); ?>" href="<?php bloginfo_rss('atom_url') ?>">
@@ -19,13 +19,13 @@
 	<body <?php body_class(); ?>>
 	<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 	<header id="top" class="clearfix">
-	<?php if ( !(is_single() || is_page()) ) { ?>
+	<?php /*if ( !(is_single() || is_page()) ) {*/ ?>
 	  <h1 class="site-title">
 	    <?php 
-			$formatted_title = (wrap_letters("o", get_bloginfo('name'), "<span class='you-spin-me-round'>$1</span>")); 
+		    $formatted_title = (wrap_word("saumon", get_bloginfo('name'), "<span class='wiggle-on-hover'>$1</span>"));
 			$tagline = get_bloginfo('description');
 			echo "<span class='avoidwrap'>" . $formatted_title . " </span><span class='avoidwrap'>" . $tagline . "</span>" ?>
 	  </h1>
-  <?php } ?>
+  <?php /*}*/ ?>
 		<?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
 	</header>
